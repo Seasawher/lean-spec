@@ -30,5 +30,5 @@ def run (cmd : String) (args : Array String) : ScriptM Bool := do
   return hasError
 
 script build do
-  if ← run "lake exe mdgen" #["LeanSpec", "md"] then return 1
+  if ← run "lake" #["exe", "mdgen", "LeanSpec", "md"] then return 1
   return 0
